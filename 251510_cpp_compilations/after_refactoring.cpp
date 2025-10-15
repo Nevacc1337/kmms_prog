@@ -1,19 +1,19 @@
 #include <iostream>
 
 int main() {
-    int size_m;
+    int arr_size;
     std::cout << "Введите размер массива: ";
-    std::cin >> size_m;
-    double a[size_m];
+    std::cin >> arr_size;
+    double arr[arr_size];
     
-    for (int i = 0; i < size_m; i++) {
+    for (int i = 0; i < arr_size; i++) {
         std::cout << "Введите " << i << " элемент: ";
-        std::cin >> a[i];
+        std::cin >> arr[i];
     }
 
     bool is_increasing = true;
-    for (int i = 0; i < size_m - 1; i++) {
-        if (a[i] >= a[i+1]) {
+    for (int i = 0; i < arr_size - 1; i++) {
+        if (arr[i] >= arr[i+1]) {
             is_increasing  = false;
             break;
         }
