@@ -1,14 +1,23 @@
 #include <iostream>
 #include "input.h"
 
-namespace input
+namespace dsv
 {
-    void readArray(double* arr, int size)
+    namespace input
     {
-        for (int i = 0; i < size; i++)
+        void readArray(double* arr, int size)
         {
-            std::cout << "Введите элемент [" << i + 1 << "]: ";
-            std::cin >> arr[i];
+            for (int i = 0; i < size; i++)
+            {
+                std::cout << "Введите элемент [" << i + 1 << "]: ";
+                std::cin >> arr[i];
+
+                if (!std::cin)
+                {
+                    std::cerr << "Ошибка: введено не число!" << std::endl;
+                    std::exit(1);
+                }
+            }
         }
     }
 }

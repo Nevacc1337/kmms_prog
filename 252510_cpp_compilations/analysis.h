@@ -1,12 +1,15 @@
 #ifndef ANALYSIS_H
 #define ANALYSIS_H
 
-namespace analysis
+namespace dsv
 {
-    double average(const double* arr, int size);
-    double minimum(const double* arr, int size);
-    double maximum(const double* arr, int size);
-    bool isIncreasing(const double* arr, int size);
+    namespace analysis
+    {
+        double average(const double* arr, int size);
+        double minimum(const double* arr, int size);
+        double maximum(const double* arr, int size);
+        bool isIncreasing(const double* arr, int size);
+    }
 }
 
 #endif

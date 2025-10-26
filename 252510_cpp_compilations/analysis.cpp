@@ -1,52 +1,55 @@
 #include "analysis.h"
 
-namespace analysis
+namespace dsv
 {
-    double average(const double* arr, int size)
+    namespace analysis
     {
-        double sum = 0.0;
-        for (int i = 0; i < size; i++)
+        double average(const double* arr, int size)
         {
-            sum += arr[i];
-        }
-        return sum / size;
-    }
-
-    double minimum(const double* arr, int size)
-    {
-        double minVal = arr[0];
-        for (int i = 1; i < size; i++)
-        {
-            if (arr[i] < minVal)
+            double sum = 0.0;
+            for (int i = 0; i < size; i++)
             {
-                minVal = arr[i];
+                sum += arr[i];
             }
+            return sum / size;
         }
-        return minVal;
-    }
 
-    double maximum(const double* arr, int size)
-    {
-        double maxVal = arr[0];
-        for (int i = 1; i < size; i++)
+        double minimum(const double* arr, int size)
         {
-            if (arr[i] > maxVal)
+            double minVal = arr[0];
+            for (int i = 1; i < size; i++)
             {
-                maxVal = arr[i];
+                if (arr[i] < minVal)
+                {
+                    minVal = arr[i];
+                }
             }
+            return minVal;
         }
-        return maxVal;
-    }
 
-    bool isIncreasing(const double* arr, int size)
-    {
-        for (int i = 0; i < size - 1; i++)
+        double maximum(const double* arr, int size)
         {
-            if (arr[i] >= arr[i + 1])
+            double maxVal = arr[0];
+            for (int i = 1; i < size; i++)
             {
-                return false;
+                if (arr[i] > maxVal)
+                {
+                    maxVal = arr[i];
+                }
             }
+            return maxVal;
         }
-        return true;
+
+        bool isIncreasing(const double* arr, int size)
+        {
+            for (int i = 0; i < size - 1; i++)
+            {
+                if (arr[i] >= arr[i + 1])
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
     }
 }

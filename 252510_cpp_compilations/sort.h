@@ -1,9 +1,12 @@
 #ifndef SORT_H
 #define SORT_H
 
-namespace sort
+namespace dsv
 {
-    void bubbleSort(double* arr, int size);
+    namespace sort
+    {
+        void bubbleSort(double* arr, int size);
+    }
 }
 
 #endif

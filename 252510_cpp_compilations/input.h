@@ -1,9 +1,12 @@
 #ifndef INPUT_H
 #define INPUT_H
 
-namespace input
+namespace dsv
 {
-    void readArray(double* arr, int size);
+    namespace input
+    {
+        void readArray(double* arr, int size);
+    }
 }
 
 #endif

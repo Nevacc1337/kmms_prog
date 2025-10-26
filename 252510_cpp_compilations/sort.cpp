@@ -1,18 +1,21 @@
 #include "sort.h"
 
-namespace sort
+namespace dsv
 {
-    void bubbleSort(double* arr, int size)
+    namespace sort
     {
-        for (int i = 0; i < size - 1; i++)
+        void bubbleSort(double* arr, int size)
         {
-            for (int j = 0; j < size - i - 1; j++)
+            for (int i = 0; i < size - 1; i++)
             {
-                if (arr[j] > arr[j + 1])
+                for (int j = 0; j < size - i - 1; j++)
                 {
-                    double temp = arr[j];
-                    arr[j] = arr[j + 1];
-                    arr[j + 1] = temp;
+                    if (arr[j] > arr[j + 1])
+                    {
+                        double temp = arr[j];
+                        arr[j] = arr[j + 1];
+                        arr[j + 1] = temp;
+                    }
                 }
             }
         }
