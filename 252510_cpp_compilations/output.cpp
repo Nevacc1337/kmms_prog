@@ -11,10 +11,7 @@ namespace dsv
             std::cout << "Среднее значение: " << avg << std::endl;
             std::cout << "Минимум: " << minVal << std::endl;
             std::cout << "Максимум: " << maxVal << std::endl;
-
-            std::cout << "Последовательность: "
-                      << (increasing ? "возрастающая" : "не возрастающая")
-                      << std::endl;
+            std::cout << "Последовательность: " << (increasing ? "возрастающая" : "не возрастающая") << std::endl;
 
             std::cout << "\nОтсортированный массив: ";
             for (int i = 0; i < size; i++)
