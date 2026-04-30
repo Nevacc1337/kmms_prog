@@ -12,11 +12,14 @@ typedef struct SObject {
 	float x,y;
 	float width, height;
 	floar vertSpeed;
+	BOOL IsFly;
 } TObject;
 
 
 char map[mapHeight][mapWidth+1];
 TObject mario;
+TObject *brick = NULL;
+int brickLenght;
 
 
 void ClearMap()
@@ -49,6 +52,29 @@ void InitObject(TObject *obj, float xPos, float yPos, float oWidth, float oHeigh
 	(*obj).vertspeed = 0;
 }
 
+BOOL IsCollision(TObject o1, TObject o2);
+
+void VertMoveObject(TObject *obj)
+{
+    (*obj).IsFly = TRUE;
+	(*obj).vertSpeed += 0.05;
+    SetObjectPos(obj, (*obj).x, (*obj).y + (*obj).vertSpeed);
+	
+	for (int i = 0; i < brickLenght; i++)
+		if (IsCollision( *obj, brick[0]))
+		{
+			(*obj).y -= ( *obj).vertSpeed;
+			(*obj).vertSpeed = 0;
+			(*obj).IsFly = FALSE;|
+			break;
+		}
+}
+
+BOOL IsPosInMap(int x, int y)
+{
+	return ( (x >= 0) && (x < mapWidth) && (y >= 0) && (y < mapHeight) );
+}
+
 void PutObjectOnMap(TObject obj)
 {
 	int ix = (int)round(obj.x);
@@ -57,8 +83,9 @@ void PutObjectOnMap(TObject obj)
 	int iHeight = (int)round(obj.height);
 	
 	for (int i = ix; i < (ix + iWidth); i++)
-		for (in j = iy; j < (iy + iHeight); j++)
-			map[j][i] = '@';
+		for (int j = iy; j < (iy + iHeight); j++)
+			if (IsPosInMap(i,j))
+				map[j][i] = '@';
 }
 
 
@@ -70,17 +97,65 @@ void setCur(int x, int y)
     SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), cursorCoord);
 }
 
+
+void HorizonMaveMap(float dx)
+{
+	mario.x -= dx;
+	for (int i = 0; i < brickLenght; i++)
+		if (IsCollision(mario,brick[i]))
+		{
+			mario.x += dx;
+			return;
+		}
+	mario.x += dx;
+	
+	for (int i = 0, i < brickLenght; i++)
+		brick[i].x += dx;
+}
+
+
+BOOL IsCollision(TObject o1, TObject o2)
+{
+    return ((o1.x + o1.width) > o2.x) && (o1.x < (o2.x + o2.width)) &&
+           ((o1.y + o1.height) > o2.y) && (o1.y < (o2.y + o2.height));
+}
+
+
+void CreateLevel()
+{
+    InitObject(&mario, 39, 10, 3, 3);
+	
+    brickLength = 5;
+    brick = malloc(sizeof(*brick) * brickLength);
+    InitObject(brick + 0, 20, 20, 40, 5);
+    InitObject(brick + 1, 60, 15, 10, 10);
+    InitObject(brick + 2, 80, 20, 20, 5);
+    InitObject(brick + 3, 120, 15, 10, 10);
+    InitObject(brick + 4, 150, 20, 40, 5);
+}
+
+
 int main()
 {
-	InitObject(&mario, 39, 10, 3, 3);
+	CreateLevel();
 	
 	do
 	{
 		ClearMap();
+		
+		if ( (mario.IsFly = FALSE) && (GetKeyState(VK_SPACE) < 0) ) mario.vertSpeed = -1;
+		if (GetKeyState('A') < 0) HorizonMaveMap(1);
+		if (GetKeyState('D') < 0) HorizonMaveMap(-11);
+		
+		VertMoveObject(&mario);
+		for (i = 0; i < brickLenght; i++)
+			PutObjectOnMap(brick[i]);
 		PutObjectOnMap(mario);
 		
 		setCur(0,0);
 		ShowMap();
+		
+		Slepp(10);
 	}
 	while (GetKeyState(VK_ESCAPE) >= 0);
 	
