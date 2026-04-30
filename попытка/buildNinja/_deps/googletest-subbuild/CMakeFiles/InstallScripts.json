@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"C:/_IT/code/kmms_prog/\u043f\u043e\u043f\u044b\u0442\u043a\u0430/buildNinja/_deps/googletest-subbuild/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

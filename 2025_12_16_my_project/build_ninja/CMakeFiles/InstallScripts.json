@@ -1,0 +1,14 @@
+{
+	"InstallScripts" : 
+	[
+		"C:/_IT/code/kmms_prog/2025_12_16_my_project/build_ninja/cmake_install.cmake",
+		"C:/_IT/code/kmms_prog/2025_12_16_my_project/build_ninja/lib/googletest/cmake_install.cmake",
+		"C:/_IT/code/kmms_prog/2025_12_16_my_project/build_ninja/lib/googletest/googlemock/cmake_install.cmake",
+		"C:/_IT/code/kmms_prog/2025_12_16_my_project/build_ninja/lib/googletest/googletest/cmake_install.cmake",
+		"C:/_IT/code/kmms_prog/2025_12_16_my_project/build_ninja/shell_sort/cmake_install.cmake",
+		"C:/_IT/code/kmms_prog/2025_12_16_my_project/build_ninja/shell_sort/src/cmake_install.cmake",
+		"C:/_IT/code/kmms_prog/2025_12_16_my_project/build_ninja/shell_sort/test/cmake_install.cmake",
+		"C:/_IT/code/kmms_prog/2025_12_16_my_project/build_ninja/obychaika/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

@@ -1,0 +1,40 @@
+Start testing: Feb 14 11:00 RTZ 2 (����)
+----------------------------------------------------------
+1/1 Testing: ShellSortTest
+1/1 Test: ShellSortTest
+Command: "C:/_IT/code/kmms_prog/2025_12_16_my_project/build_ninja/shell_sort/test/test_shell.exe"
+Directory: C:/_IT/code/kmms_prog/2025_12_16_my_project/build_ninja/shell_sort/test
+"ShellSortTest" start time: Feb 14 11:00 RTZ 2 (����)
+Output:
+----------------------------------------------------------
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from ShellSortTest
+[ RUN      ] ShellSortTest.AnyElementsCount
+C:/_IT/code/kmms_prog/2025_12_16_my_project/project/shell_sort/test/test_shell.cpp:13: Failure
+Expected equality of these values:
+  expected[i]
+    Which is: 5
+  actual[i]
+    Which is: 2
+Массив ожидаемый и отсортированный отличаются в элементе с индексом 1
+
+[  FAILED  ] ShellSortTest.AnyElementsCount (0 ms)
+[----------] 1 test from ShellSortTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (1 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] ShellSortTest.AnyElementsCount
+
+ 1 FAILED TEST
+<end of output>
+Test time =   0.26 sec
+----------------------------------------------------------
+Test Failed.
+"ShellSortTest" end time: Feb 14 11:00 RTZ 2 (����)
+"ShellSortTest" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Feb 14 11:00 RTZ 2 (����)
