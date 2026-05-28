@@ -96,6 +96,32 @@ void VertMoveObject(TObject *obj)
 		}
 }
 
+void DeleteMoving(int i)
+{
+    movingLength--;
+    moving[i] = moving[movingLength];
+    moving = realloc(moving, sizeof(*moving) * movingLength);
+}
+
+void MarioCollision()
+{
+    for (int i = 0; i < movingLength; i++)
+		if (IsCollision( mario, moving[i]))
+		{
+			if ( (mario.IsFly == TRUE) 
+				&& (mario.vertSpeed > 0) 
+				&& (mario.y + mario.height < moving[i].y + moving[i].height * 0.5) 
+				) 
+			{ 
+				DeleteMoving(i); 
+				i--; 
+				continue; 
+			} 
+			else 
+				CreateLevel(level);
+		}
+}
+
 void HorizonMoveObject(TObject *obj)
 {
     obj[0].x += obj[0].horizSpeed;
@@ -107,7 +133,15 @@ void HorizonMoveObject(TObject *obj)
 			obj[0].horizSpeed = -obj[0].horizSpeed;
 			return;
 		}
-    }
+	
+	Object tmp = *obj;
+	VertMoveObject(&tmp);
+	if (tmp.IsFly == TRUE)
+	{
+		obj[0].x -= obj[0].horizSpeed;
+		obj[0].horizSpeed = -obj[0].horizSpeed;
+	}
+    
 }
 
 BOOL IsPosInMap(int x, int y)
@@ -212,12 +246,20 @@ int main()
 		if (mario.y > mapHeight) CreateLevel(level);
 		
 		VertMoveObject(&mario);
+		MarioCollision();
+		
 		for (int i = 0; i < brickLength; i++)  
 			PutObjectOnMap(brick[i]);
 		for (int i = 0; i < movingLenght; i++)  
 		{
 			VertMoveObject(moving + i);
 			HorizonMoveObject(moving + i);
+			if (moving[i].y > mapHeight)
+			{
+				DeleteMoving(i);
+				i--;
+				continue;
+			}
 			PutObjectOnMap(moving[i]);
 		}
 		PutObjectOnMap(mario);
