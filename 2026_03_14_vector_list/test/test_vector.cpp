@@ -52,7 +52,6 @@ TEST(VectorTest, PushBackIncreasesSize) {
 
 TEST(VectorTest, PushBackBeyondInitialCapacity) {
 	Vector<int> v;
-	// START_CAPACITY = 4, push more to trigger reallocation
 	for (int i = 0; i < 20; ++i) {
 		v.push_back(i);
 	}
@@ -119,7 +118,6 @@ TEST(VectorTest, RemoveFirstOnlyFirst) {
 	bool result = v.remove_first(5);
 	EXPECT_TRUE(result);
 	EXPECT_EQ(v.get_size(), 2u);
-	// Remaining two 5s should still be there
 	EXPECT_TRUE(v.has_item(5));
 }
 

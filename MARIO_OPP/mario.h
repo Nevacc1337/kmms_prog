@@ -7,9 +7,9 @@
 #define MAP_HEIGHT 25
 
 /* ── Физика ── */
-constexpr float GRAVITY    =  0.05f;
-constexpr float JUMP_SPEED = -1.0f;
-constexpr float MOVE_SPEED =  1.0f;
+constexpr float GRAVITY    =  0.3f;
+constexpr float JUMP_SPEED = -10.0f;
+constexpr float MOVE_SPEED =  12.0f;
 
 constexpr char CHAR_MARIO = '@';
 constexpr char CHAR_BRICK = '#';
