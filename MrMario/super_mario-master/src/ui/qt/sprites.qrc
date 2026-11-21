@@ -1,0 +1,17 @@
+<RCC>
+	<qresource prefix="/">
+		<file>sprites/brick.png</file>
+		<file>sprites/coin.png</file>
+		<file>sprites/goomba.png</file>
+		<file>sprites/goomba_wings.png</file>
+		<file>sprites/grass.png</file>
+		<file>sprites/ground.png</file>
+		<file>sprites/jumper.png</file>
+		<file>sprites/mario.png</file>
+		<file>sprites/platform.png</file>
+		<file>sprites/question.png</file>
+		<file>sprites/used.png</file>
+		<file>sprites/water.png</file>
+		<file>sprites/water_top.png</file>
+	</qresource>
+</RCC>

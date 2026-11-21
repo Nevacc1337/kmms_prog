@@ -4,4 +4,5 @@ lib/
 *.exe
 *.ii
 *.s
-*.o
+*.obuild_ninja/
+build_qt_ninja/

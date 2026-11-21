@@ -1,0 +1,5 @@
+C:/_IT/code/kmms_prog/2026_09_08_qt_keyboard/build_ninja/CMakeFiles/keyboard.dir
+C:/_IT/code/kmms_prog/2026_09_08_qt_keyboard/build_ninja/CMakeFiles/edit_cache.dir
+C:/_IT/code/kmms_prog/2026_09_08_qt_keyboard/build_ninja/CMakeFiles/rebuild_cache.dir
+C:/_IT/code/kmms_prog/2026_09_08_qt_keyboard/build_ninja/CMakeFiles/keyboard_autogen_timestamp_deps.dir
+C:/_IT/code/kmms_prog/2026_09_08_qt_keyboard/build_ninja/CMakeFiles/keyboard_autogen.dir

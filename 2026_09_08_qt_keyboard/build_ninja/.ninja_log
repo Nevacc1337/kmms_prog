@@ -1,0 +1,18 @@
+# ninja log v7
+17	918	8138454189541003	keyboard_autogen/timestamp	f2d14e4d792152d1
+17	918	8138454189541003	keyboard_autogen/mocs_compilation.cpp	f2d14e4d792152d1
+17	918	8138454189541003	C:/_IT/code/kmms_prog/2026_09_08_qt_keyboard/build_ninja/keyboard_autogen/timestamp	f2d14e4d792152d1
+17	918	8138454189541003	C:/_IT/code/kmms_prog/2026_09_08_qt_keyboard/build_ninja/keyboard_autogen/mocs_compilation.cpp	f2d14e4d792152d1
+984	3948	8138454191012274	CMakeFiles/keyboard.dir/src/keyboard_data.cpp.obj	81456918e0bf1310
+971	5283	8138454190892620	CMakeFiles/keyboard.dir/src/keyboard_button.cpp.obj	75defc7d7caf3de4
+958	5612	8138454190752965	CMakeFiles/keyboard.dir/src/keyboard.cpp.obj	a9108acd5a49e85a
+1023	5668	8138454191411209	CMakeFiles/keyboard.dir/src/welcome_window.cpp.obj	b2271410f3dacab5
+1012	5676	8138454191291526	CMakeFiles/keyboard.dir/src/mood_face.cpp.obj	bd68cc59bde6f19f
+998	5865	8138454191153001	CMakeFiles/keyboard.dir/src/keyboard_window.cpp.obj	516708f60e3c704f
+936	5928	8138454190533986	CMakeFiles/keyboard.dir/keyboard_autogen/mocs_compilation.cpp.obj	13e300c5164add35
+137	466	8138454980758836	keyboard_autogen/timestamp	f2d14e4d792152d1
+137	466	8138454980758836	keyboard_autogen/mocs_compilation.cpp	f2d14e4d792152d1
+137	466	8138454980758836	C:/_IT/code/kmms_prog/2026_09_08_qt_keyboard/build_ninja/keyboard_autogen/timestamp	f2d14e4d792152d1
+137	466	8138454980758836	C:/_IT/code/kmms_prog/2026_09_08_qt_keyboard/build_ninja/keyboard_autogen/mocs_compilation.cpp	f2d14e4d792152d1
+468	2427	8138454984069826	CMakeFiles/keyboard.dir/src/main.cpp.obj	11ea47e8e028ba1c
+2427	2691	8138455003657777	keyboard.exe	e187acea67b7c886

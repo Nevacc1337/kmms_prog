@@ -1,0 +1,5 @@
+if(GAME_TYPE STREQUAL "Qt")
+	add_subdirectory(qt)
+else()
+	add_subdirectory(console)
+endif()
